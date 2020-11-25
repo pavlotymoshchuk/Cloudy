@@ -1,0 +1,615 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		043F580B256E7C090046BA45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F580A256E7C090046BA45 /* AppDelegate.swift */; };
+		043F580D256E7C090046BA45 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F580C256E7C090046BA45 /* SceneDelegate.swift */; };
+		043F580F256E7C090046BA45 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F580E256E7C090046BA45 /* ViewController.swift */; };
+		043F5812256E7C090046BA45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043F5810256E7C090046BA45 /* Main.storyboard */; };
+		043F5815256E7C090046BA45 /* Cloudy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 043F5813256E7C090046BA45 /* Cloudy.xcdatamodeld */; };
+		043F5817256E7C0A0046BA45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 043F5816256E7C0A0046BA45 /* Assets.xcassets */; };
+		043F581A256E7C0A0046BA45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043F5818256E7C0A0046BA45 /* LaunchScreen.storyboard */; };
+		043F5825256E7C0A0046BA45 /* CloudyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F5824256E7C0A0046BA45 /* CloudyTests.swift */; };
+		043F5830256E7C0A0046BA45 /* CloudyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F582F256E7C0A0046BA45 /* CloudyUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		043F5821256E7C0A0046BA45 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 043F57FF256E7C090046BA45 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 043F5806256E7C090046BA45;
+			remoteInfo = Cloudy;
+		};
+		043F582C256E7C0A0046BA45 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 043F57FF256E7C090046BA45 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 043F5806256E7C090046BA45;
+			remoteInfo = Cloudy;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		043F5807256E7C090046BA45 /* Cloudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cloudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		043F580A256E7C090046BA45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		043F580C256E7C090046BA45 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		043F580E256E7C090046BA45 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		043F5811256E7C090046BA45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		043F5814256E7C090046BA45 /* Cloudy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Cloudy.xcdatamodel; sourceTree = "<group>"; };
+		043F5816256E7C0A0046BA45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		043F5819256E7C0A0046BA45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		043F581B256E7C0A0046BA45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		043F5820256E7C0A0046BA45 /* CloudyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CloudyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		043F5824256E7C0A0046BA45 /* CloudyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudyTests.swift; sourceTree = "<group>"; };
+		043F5826256E7C0A0046BA45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		043F582B256E7C0A0046BA45 /* CloudyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CloudyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		043F582F256E7C0A0046BA45 /* CloudyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudyUITests.swift; sourceTree = "<group>"; };
+		043F5831256E7C0A0046BA45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		043F5804256E7C090046BA45 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		043F581D256E7C0A0046BA45 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		043F5828256E7C0A0046BA45 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		043F57FE256E7C090046BA45 = {
+			isa = PBXGroup;
+			children = (
+				043F5809256E7C090046BA45 /* Cloudy */,
+				043F5823256E7C0A0046BA45 /* CloudyTests */,
+				043F582E256E7C0A0046BA45 /* CloudyUITests */,
+				043F5808256E7C090046BA45 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		043F5808256E7C090046BA45 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				043F5807256E7C090046BA45 /* Cloudy.app */,
+				043F5820256E7C0A0046BA45 /* CloudyTests.xctest */,
+				043F582B256E7C0A0046BA45 /* CloudyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		043F5809256E7C090046BA45 /* Cloudy */ = {
+			isa = PBXGroup;
+			children = (
+				043F580A256E7C090046BA45 /* AppDelegate.swift */,
+				043F580C256E7C090046BA45 /* SceneDelegate.swift */,
+				043F580E256E7C090046BA45 /* ViewController.swift */,
+				043F5810256E7C090046BA45 /* Main.storyboard */,
+				043F5816256E7C0A0046BA45 /* Assets.xcassets */,
+				043F5818256E7C0A0046BA45 /* LaunchScreen.storyboard */,
+				043F581B256E7C0A0046BA45 /* Info.plist */,
+				043F5813256E7C090046BA45 /* Cloudy.xcdatamodeld */,
+			);
+			path = Cloudy;
+			sourceTree = "<group>";
+		};
+		043F5823256E7C0A0046BA45 /* CloudyTests */ = {
+			isa = PBXGroup;
+			children = (
+				043F5824256E7C0A0046BA45 /* CloudyTests.swift */,
+				043F5826256E7C0A0046BA45 /* Info.plist */,
+			);
+			path = CloudyTests;
+			sourceTree = "<group>";
+		};
+		043F582E256E7C0A0046BA45 /* CloudyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				043F582F256E7C0A0046BA45 /* CloudyUITests.swift */,
+				043F5831256E7C0A0046BA45 /* Info.plist */,
+			);
+			path = CloudyUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		043F5806256E7C090046BA45 /* Cloudy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 043F5834256E7C0A0046BA45 /* Build configuration list for PBXNativeTarget "Cloudy" */;
+			buildPhases = (
+				043F5803256E7C090046BA45 /* Sources */,
+				043F5804256E7C090046BA45 /* Frameworks */,
+				043F5805256E7C090046BA45 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Cloudy;
+			productName = Cloudy;
+			productReference = 043F5807256E7C090046BA45 /* Cloudy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		043F581F256E7C0A0046BA45 /* CloudyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 043F5837256E7C0A0046BA45 /* Build configuration list for PBXNativeTarget "CloudyTests" */;
+			buildPhases = (
+				043F581C256E7C0A0046BA45 /* Sources */,
+				043F581D256E7C0A0046BA45 /* Frameworks */,
+				043F581E256E7C0A0046BA45 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				043F5822256E7C0A0046BA45 /* PBXTargetDependency */,
+			);
+			name = CloudyTests;
+			productName = CloudyTests;
+			productReference = 043F5820256E7C0A0046BA45 /* CloudyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		043F582A256E7C0A0046BA45 /* CloudyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 043F583A256E7C0A0046BA45 /* Build configuration list for PBXNativeTarget "CloudyUITests" */;
+			buildPhases = (
+				043F5827256E7C0A0046BA45 /* Sources */,
+				043F5828256E7C0A0046BA45 /* Frameworks */,
+				043F5829256E7C0A0046BA45 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				043F582D256E7C0A0046BA45 /* PBXTargetDependency */,
+			);
+			name = CloudyUITests;
+			productName = CloudyUITests;
+			productReference = 043F582B256E7C0A0046BA45 /* CloudyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		043F57FF256E7C090046BA45 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					043F5806256E7C090046BA45 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					043F581F256E7C0A0046BA45 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = 043F5806256E7C090046BA45;
+					};
+					043F582A256E7C0A0046BA45 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = 043F5806256E7C090046BA45;
+					};
+				};
+			};
+			buildConfigurationList = 043F5802256E7C090046BA45 /* Build configuration list for PBXProject "Cloudy" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 043F57FE256E7C090046BA45;
+			productRefGroup = 043F5808256E7C090046BA45 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				043F5806256E7C090046BA45 /* Cloudy */,
+				043F581F256E7C0A0046BA45 /* CloudyTests */,
+				043F582A256E7C0A0046BA45 /* CloudyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		043F5805256E7C090046BA45 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				043F581A256E7C0A0046BA45 /* LaunchScreen.storyboard in Resources */,
+				043F5817256E7C0A0046BA45 /* Assets.xcassets in Resources */,
+				043F5812256E7C090046BA45 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		043F581E256E7C0A0046BA45 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		043F5829256E7C0A0046BA45 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		043F5803256E7C090046BA45 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				043F580F256E7C090046BA45 /* ViewController.swift in Sources */,
+				043F580B256E7C090046BA45 /* AppDelegate.swift in Sources */,
+				043F580D256E7C090046BA45 /* SceneDelegate.swift in Sources */,
+				043F5815256E7C090046BA45 /* Cloudy.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		043F581C256E7C0A0046BA45 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				043F5825256E7C0A0046BA45 /* CloudyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		043F5827256E7C0A0046BA45 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				043F5830256E7C0A0046BA45 /* CloudyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		043F5822256E7C0A0046BA45 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 043F5806256E7C090046BA45 /* Cloudy */;
+			targetProxy = 043F5821256E7C0A0046BA45 /* PBXContainerItemProxy */;
+		};
+		043F582D256E7C0A0046BA45 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 043F5806256E7C090046BA45 /* Cloudy */;
+			targetProxy = 043F582C256E7C0A0046BA45 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		043F5810256E7C090046BA45 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				043F5811256E7C090046BA45 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		043F5818256E7C0A0046BA45 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				043F5819256E7C0A0046BA45 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		043F5832256E7C0A0046BA45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		043F5833256E7C0A0046BA45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		043F5835256E7C0A0046BA45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TKCHBW3N32;
+				INFOPLIST_FILE = Cloudy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tymoshch.Cloudy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		043F5836256E7C0A0046BA45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TKCHBW3N32;
+				INFOPLIST_FILE = Cloudy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tymoshch.Cloudy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		043F5838256E7C0A0046BA45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TKCHBW3N32;
+				INFOPLIST_FILE = CloudyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tymoshch.CloudyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cloudy.app/Cloudy";
+			};
+			name = Debug;
+		};
+		043F5839256E7C0A0046BA45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TKCHBW3N32;
+				INFOPLIST_FILE = CloudyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tymoshch.CloudyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cloudy.app/Cloudy";
+			};
+			name = Release;
+		};
+		043F583B256E7C0A0046BA45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TKCHBW3N32;
+				INFOPLIST_FILE = CloudyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tymoshch.CloudyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Cloudy;
+			};
+			name = Debug;
+		};
+		043F583C256E7C0A0046BA45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TKCHBW3N32;
+				INFOPLIST_FILE = CloudyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tymoshch.CloudyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Cloudy;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		043F5802256E7C090046BA45 /* Build configuration list for PBXProject "Cloudy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				043F5832256E7C0A0046BA45 /* Debug */,
+				043F5833256E7C0A0046BA45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		043F5834256E7C0A0046BA45 /* Build configuration list for PBXNativeTarget "Cloudy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				043F5835256E7C0A0046BA45 /* Debug */,
+				043F5836256E7C0A0046BA45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		043F5837256E7C0A0046BA45 /* Build configuration list for PBXNativeTarget "CloudyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				043F5838256E7C0A0046BA45 /* Debug */,
+				043F5839256E7C0A0046BA45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		043F583A256E7C0A0046BA45 /* Build configuration list for PBXNativeTarget "CloudyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				043F583B256E7C0A0046BA45 /* Debug */,
+				043F583C256E7C0A0046BA45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		043F5813256E7C090046BA45 /* Cloudy.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				043F5814256E7C090046BA45 /* Cloudy.xcdatamodel */,
+			);
+			currentVersion = 043F5814256E7C090046BA45 /* Cloudy.xcdatamodel */;
+			path = Cloudy.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 043F57FF256E7C090046BA45 /* Project object */;
+}
