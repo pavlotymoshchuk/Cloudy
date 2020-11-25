@@ -25,14 +25,20 @@ class ViewController: UIViewController {
         }
     }
 
-    
     func addPhotoToBackground() {
         backgroundImageView.image = currentImage
+        
+        if let image = AnalyzingPhoto(currentImage).createSkyImage(currentImage) {
+            backgroundImageView.image = image
+        } else {
+            print("ERROR")
+        }
+        
     }
     
     func imageForBackground() -> UIImageView {
-        backgroundImageView = .init(frame: self.view.frame)
-        backgroundImageView.image = currentImage
+        backgroundImageView = .init()
+        backgroundImageView.frame.size = CGSize(width: self.view.frame.width, height: self.view.frame.height-200)
         backgroundImageView.contentMode = .scaleAspectFit
         return backgroundImageView
     }
