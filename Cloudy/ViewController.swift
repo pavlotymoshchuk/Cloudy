@@ -9,13 +9,15 @@ import UIKit
 import Photos
 class ViewController: UIViewController {
     
-    var backgroundImageView: UIImageView!
+    var imageView: UIImageView!
+    var skyImageView: UIImageView!
     var currentImage = UIImage()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.insertSubview(imageForBackground(), at: 0)
+        self.view.insertSubview(imageViewCreating(), at: 0)
+        self.view.insertSubview(skyImageViewCreating(), at: 0)
     }
     
     @IBAction func uploadImageButton(_ sender: Any) {
@@ -26,21 +28,29 @@ class ViewController: UIViewController {
     }
 
     func addPhotoToBackground() {
-        backgroundImageView.image = currentImage
+        imageView.image = currentImage
         
         if let image = AnalyzingPhoto(currentImage).createSkyImage(currentImage) {
-            backgroundImageView.image = image
+            skyImageView.image = image
         } else {
             print("ERROR")
         }
         
     }
     
-    func imageForBackground() -> UIImageView {
-        backgroundImageView = .init()
-        backgroundImageView.frame.size = CGSize(width: self.view.frame.width, height: self.view.frame.height-200)
-        backgroundImageView.contentMode = .scaleAspectFit
-        return backgroundImageView
+    func imageViewCreating() -> UIImageView {
+        imageView = .init()
+        imageView.frame.size = CGSize(width: self.view.frame.width/2, height: self.view.frame.height-200)
+        imageView.contentMode = .scaleAspectFit
+        return imageView
+    }
+    
+    func skyImageViewCreating() -> UIImageView {
+        skyImageView = .init()
+        skyImageView.frame.size = CGSize(width: self.view.frame.width/2, height: self.view.frame.height-200)
+        skyImageView.frame.origin.x = self.view.frame.width/2
+        skyImageView.contentMode = .scaleAspectFit
+        return skyImageView
     }
 
     
