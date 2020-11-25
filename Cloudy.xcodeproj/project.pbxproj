@@ -16,6 +16,7 @@
 		043F581A256E7C0A0046BA45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043F5818256E7C0A0046BA45 /* LaunchScreen.storyboard */; };
 		043F5825256E7C0A0046BA45 /* CloudyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F5824256E7C0A0046BA45 /* CloudyTests.swift */; };
 		043F5830256E7C0A0046BA45 /* CloudyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F582F256E7C0A0046BA45 /* CloudyUITests.swift */; };
+		04DAA395256E962400BCB4D7 /* ImagePickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DAA394256E962400BCB4D7 /* ImagePickerManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		043F582B256E7C0A0046BA45 /* CloudyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CloudyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		043F582F256E7C0A0046BA45 /* CloudyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudyUITests.swift; sourceTree = "<group>"; };
 		043F5831256E7C0A0046BA45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04DAA394256E962400BCB4D7 /* ImagePickerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				043F580A256E7C090046BA45 /* AppDelegate.swift */,
 				043F580C256E7C090046BA45 /* SceneDelegate.swift */,
 				043F580E256E7C090046BA45 /* ViewController.swift */,
+				04DAA394256E962400BCB4D7 /* ImagePickerManager.swift */,
 				043F5810256E7C090046BA45 /* Main.storyboard */,
 				043F5816256E7C0A0046BA45 /* Assets.xcassets */,
 				043F5818256E7C0A0046BA45 /* LaunchScreen.storyboard */,
@@ -262,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				043F580F256E7C090046BA45 /* ViewController.swift in Sources */,
+				04DAA395256E962400BCB4D7 /* ImagePickerManager.swift in Sources */,
 				043F580B256E7C090046BA45 /* AppDelegate.swift in Sources */,
 				043F580D256E7C090046BA45 /* SceneDelegate.swift in Sources */,
 				043F5815256E7C090046BA45 /* Cloudy.xcdatamodeld in Sources */,

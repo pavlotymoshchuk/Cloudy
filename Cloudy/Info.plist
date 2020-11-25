@@ -2,14 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>NSCameraUsageDescription</key>
-    <string>This app will use camera.</string>
-    <key>NSPhotoLibraryUsageDescription</key>
-    <string>You can select photos to attach to reports.</string>
-    <key>NSPhotoLibraryAddUsageDescription</key>
-    <string>Please allow access to save photo in your photo library</string>
+	<key>NSCameraUsageDescription</key>
+	<string>$(PRODUCT_NAME) camera use</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>To add a noir filter</string>
+	<string>$(PRODUCT_NAME) photo use</string>
+	<key>BGTaskSchedulerPermittedIdentifiers</key>
+	<array/>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -28,6 +26,10 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>Privacy - Camera Usage Description  </key>
+	<string>$(PRODUCT_NAME) camera use</string>
+	<key>Privacy - Photo Library Usage Description </key>
+	<string>$(PRODUCT_NAME) photo use</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -55,7 +57,7 @@
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
-		<string></string>
+		<string>armv7</string>
 	</array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
