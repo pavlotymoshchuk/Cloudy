@@ -44,6 +44,7 @@
 /* Begin PBXFileReference section */
 		00A350C5ECCBD240E9353DD3 /* Pods_Cloudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cloudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		041FB143256EC63000A6756A /* Fritz-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Fritz-Info.plist"; sourceTree = "<group>"; };
+		041FB16D256EDB3E00A6756A /* Cloudy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Cloudy.entitlements; sourceTree = "<group>"; };
 		043F5807256E7C090046BA45 /* Cloudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cloudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		043F580A256E7C090046BA45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		043F580C256E7C090046BA45 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +125,7 @@
 		043F5809256E7C090046BA45 /* Cloudy */ = {
 			isa = PBXGroup;
 			children = (
+				041FB16D256EDB3E00A6756A /* Cloudy.entitlements */,
 				043F580A256E7C090046BA45 /* AppDelegate.swift */,
 				043F580C256E7C090046BA45 /* SceneDelegate.swift */,
 				043F580E256E7C090046BA45 /* ViewController.swift */,
@@ -601,6 +603,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Cloudy/Cloudy.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TKCHBW3N32;
 				INFOPLIST_FILE = Cloudy/Info.plist;
@@ -611,6 +614,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = tymoshch.Cloudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -622,6 +626,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Cloudy/Cloudy.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TKCHBW3N32;
 				INFOPLIST_FILE = Cloudy/Info.plist;
@@ -632,6 +637,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = tymoshch.Cloudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
