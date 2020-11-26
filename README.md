@@ -2,7 +2,10 @@
 
 Used links:
 (Cloud coverage estimates on photo)
-https://docs.fritz.ai/develop/vision/image-segmentation/#ios       Get the sky
+
+Get the sky: https://docs.fritz.ai/develop/vision/image-segmentation/#ios
+
+Image Segmentation Guide: https://www.fritz.ai/image-segmentation/
 
 https://github.com/fritzlabs/fritz-examples/tree/master/iOS/FritzSkyReplacementDemo
 
