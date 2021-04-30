@@ -71,9 +71,9 @@ class ViewController: UIViewController {
             UIView.animate(withDuration: 0.05) {
                 self.skyImageView.transform = CGAffineTransform.identity
                 let imageToDownload = UIImage(data: self.skyImageView.image!.pngData()!)!
-//                UIImageWriteToSavedPhotosAlbum(imageToDownload, self, nil, nil)
-//                let imageWithAdjustmentToDownload = imageToDownload.withAdjustment(bySaturationVal: 0, byContrastVal: 1.35)
-//                UIImageWriteToSavedPhotosAlbum(imageWithAdjustmentToDownload, self, nil, nil)
+                //                UIImageWriteToSavedPhotosAlbum(imageToDownload, self, nil, nil)
+                //                let imageWithAdjustmentToDownload = imageToDownload.withAdjustment(bySaturationVal: 0, byContrastVal: 1.35)
+                //                UIImageWriteToSavedPhotosAlbum(imageWithAdjustmentToDownload, self, nil, nil)
                 let cloudPercentage = self.getAverageColorOfImage(image: imageToDownload)!
                 self.alert(alertTitle: "Saved", alertMessage: "Image was saved" + "\n" + "Cloud Percentage " + String(cloudPercentage) + "%", alertActionTitle: "OK")
             }
@@ -90,7 +90,6 @@ class ViewController: UIViewController {
         alert.addAction(action)
         self.present(alert, animated: true, completion: nil)
     }
-
     
     func getAverageColorOfImage(image: UIImage) -> Float? /*-> (UInt8, UInt8, UInt8, Float)?*/ {
         guard let cgImage = image.cgImage else { return nil }
@@ -112,19 +111,18 @@ class ViewController: UIViewController {
         ) else { return nil }
         imageContext.draw(cgImage, in: CGRect(x: 0, y: 0, width: width, height: height))
         let pixels = UnsafeMutableBufferPointer<Pixel>(start: imageData, count: width * height)
-
+        
         var cloudPercentage: Float = 0
         print(width,height)
         
         var pixelCount = 0
         var cloudPixelCount = 0
-
+        
         for y in 0..<height {
             for x in 0..<width {
                 let index = y * width + x
                 let pixel = pixels[index]
-                if pixel.alpha != 0 {
-//                    print(pixel.red,pixel.green,pixel.blue)
+                if pixel.alpha != 0 && x%5==y%5 {
                     if calculateVSC(pixel: pixel) < 0 {
                         cloudPixelCount += 1
                     }
@@ -147,9 +145,9 @@ class ViewController: UIViewController {
         let scyl: Float = ([r,g,b].max()! - [r,g,b].min()!) == 0 ? 0 : ([r,g,b].max()!-[r,g,b].min()!)/(1-abs(2*v-1))
         let scone:Float = 0
         let br = (b-r)/(b+r)
-            
-//        vsc = -6.28*r + 0.454*g - 4.11*b - 1.81*scyl - 4.04*scone + 8.88*v + 1.53*br + 0.586
-        vsc = -6.28*r + 0.454*g - 4.11*b - 2.5*scyl + 8.88*v + 1.53*br + 0.586
+        
+        //        vsc = -6.28*r + 0.454*g - 4.11*b - 1.81*scyl - 4.04*scone + 8.88*v + 1.53*br + 0.586
+        vsc = -6.28*r + 0.454*g - 4.11*b - 1.8*scyl + 8.88*v + 1.53*br + 0.586
         return vsc
     }
     
