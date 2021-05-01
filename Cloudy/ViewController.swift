@@ -12,6 +12,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     var imageView: UIImageView!
     var imagePicker = UIImagePickerController()
+    var isCurrentImageSky = Bool()
+    var image = UIImage()
+    var skyImage = UIImage()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -134,6 +137,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
         
         self.imageView.image = image
+        self.image = image
         self.view.bringSubviewToFront(self.imageView)
         let indicator = Indicator()
         indicator.showIndicator()
@@ -147,6 +151,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func addPhotoAndCalculateCloudPercentage(image: UIImage) {
         let photoAnalyzer = PhotoAnalyzer(image)
         if let image = photoAnalyzer.createSkyImage() {
+            isCurrentImageSky = false
+            skyImage = image
             let cloudPercentage = photoAnalyzer.getCloudPercentage(image: image)!
             if !cloudPercentage.isNaN {
                 self.alert(alertTitle: "", alertMessage: "Cloud Percentage " + String(cloudPercentage) + "%", alertActionTitle: "OK")
@@ -160,10 +166,19 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func imageViewCreating() -> UIImageView {
         imageView = .init()
-        imageView.frame.size = CGSize(width: self.view.frame.width, height: self.view.frame.height-200)
+        imageView.frame.origin = CGPoint(x: 25, y: 50)
+        imageView.frame.size = CGSize(width: self.view.frame.width-50, height: self.view.frame.height/2)
         imageView.contentMode = .scaleAspectFit
         self.view.bringSubviewToFront(imageView)
+        imageView.isUserInteractionEnabled = true
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(changePhoto))
+        imageView.addGestureRecognizer(gestureRecognizer)
         return imageView
+    }
+    
+    @objc func changePhoto() {
+        imageView.image = isCurrentImageSky ? image : skyImage
+        isCurrentImageSky.toggle()
     }
     
     // MARK: - Make ALERT
@@ -174,6 +189,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         alert.addAction(action)
         self.present(alert, animated: true, completion: nil)
     }
+    
     
     
     
