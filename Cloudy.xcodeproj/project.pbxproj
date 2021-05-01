@@ -18,6 +18,7 @@
 		043F5825256E7C0A0046BA45 /* CloudyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F5824256E7C0A0046BA45 /* CloudyTests.swift */; };
 		043F5830256E7C0A0046BA45 /* CloudyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F582F256E7C0A0046BA45 /* CloudyUITests.swift */; };
 		043FF487256EAA9E006D563E /* AnalyzingPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043FF486256EAA9E006D563E /* AnalyzingPhoto.swift */; };
+		047D5280263D45E400D4DCBB /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D527F263D45E400D4DCBB /* ActivityIndicatorView.swift */; };
 		04DAA395256E962400BCB4D7 /* ImagePickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DAA394256E962400BCB4D7 /* ImagePickerManager.swift */; };
 		4D4FBDC653DF7EC39F3DE52B /* Pods_CloudyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61FE1754495AC77F4BEF3A83 /* Pods_CloudyTests.framework */; };
 		CA4C84B387149E3C216EFED7 /* Pods_Cloudy_CloudyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CB3A98BDB0C1C8F6868BC0C /* Pods_Cloudy_CloudyUITests.framework */; };
@@ -60,6 +61,7 @@
 		043F582F256E7C0A0046BA45 /* CloudyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudyUITests.swift; sourceTree = "<group>"; };
 		043F5831256E7C0A0046BA45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		043FF486256EAA9E006D563E /* AnalyzingPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzingPhoto.swift; sourceTree = "<group>"; };
+		047D527F263D45E400D4DCBB /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
 		04DAA394256E962400BCB4D7 /* ImagePickerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerManager.swift; sourceTree = "<group>"; };
 		28E16A5749BE9BF23336FC92 /* Pods_Cloudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cloudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CB3A98BDB0C1C8F6868BC0C /* Pods_Cloudy_CloudyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cloudy_CloudyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,6 +133,7 @@
 				043F580E256E7C090046BA45 /* ViewController.swift */,
 				04DAA394256E962400BCB4D7 /* ImagePickerManager.swift */,
 				043FF486256EAA9E006D563E /* AnalyzingPhoto.swift */,
+				047D527F263D45E400D4DCBB /* ActivityIndicatorView.swift */,
 				043F5810256E7C090046BA45 /* Main.storyboard */,
 				043F5816256E7C0A0046BA45 /* Assets.xcassets */,
 				043F5818256E7C0A0046BA45 /* LaunchScreen.storyboard */,
@@ -421,6 +424,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				047D5280263D45E400D4DCBB /* ActivityIndicatorView.swift in Sources */,
 				043F580F256E7C090046BA45 /* ViewController.swift in Sources */,
 				04DAA395256E962400BCB4D7 /* ImagePickerManager.swift in Sources */,
 				043FF487256EAA9E006D563E /* AnalyzingPhoto.swift in Sources */,

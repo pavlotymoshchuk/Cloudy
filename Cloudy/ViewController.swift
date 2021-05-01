@@ -8,78 +8,162 @@
 import UIKit
 import Photos
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var imageView: UIImageView!
-    var skyImageView: UIImageView!
-    var currentImage = UIImage()
+    var imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        addBackground(view: self.view)
+        addSelectImageButton(view: self.view)
+        
         self.view.insertSubview(imageViewCreating(), at: 0)
-        self.view.insertSubview(skyImageViewCreating(), at: 0)
+        
     }
     
-    @IBAction func uploadImageButton(_ sender: Any) {
-        ImagePickerManager().pickImage(self){ image in
-            self.currentImage = image
-            self.addPhotoToBackground()
+    func addBackground(view: UIView) {
+        let layer0 = CAGradientLayer()
+        layer0.colors = [
+            UIColor(red: 0.883, green: 0.968, blue: 1, alpha: 1).cgColor,
+            UIColor(red: 0.351, green: 0.816, blue: 0.992, alpha: 1).cgColor,
+            UIColor(red: 0.197, green: 0.269, blue: 0.296, alpha: 1).cgColor
+        ]
+        layer0.locations = [0, 0.5, 1]
+        layer0.startPoint = CGPoint(x: 0.25, y: 0.5)
+        layer0.endPoint = CGPoint(x: 0.75, y: 0.5)
+        layer0.transform = CATransform3DMakeAffineTransform(CGAffineTransform(a: 0, b: 1, c: -1, d: 0, tx: 1, ty: 0))
+        layer0.bounds = view.bounds.insetBy(dx: -1*view.bounds.size.width, dy: -1*view.bounds.size.height)
+        layer0.position = view.center
+        view.layer.addSublayer(layer0)
+        
+        let imageSize: CGFloat = 150
+        let padding = (view.frame.height - 3*imageSize)/6
+        
+        let sunImage = UIImageView()
+        sunImage.layer.opacity = 0.4
+        sunImage.frame = CGRect(x: (view.frame.width-imageSize)/2,
+                                y: padding,
+                                width: imageSize,
+                                height: imageSize)
+        sunImage.image = UIImage(named: "sun-image")
+        view.addSubview(sunImage)
+        
+        let cloudedSun = UIImageView()
+        cloudedSun.layer.opacity = 0.4
+        cloudedSun.frame = CGRect(x: (view.frame.width-imageSize)/2,
+                                  y: (view.frame.height-imageSize)/2,
+                                  width: imageSize,
+                                  height: imageSize)
+        cloudedSun.image = UIImage(named: "clouded-sun-image")
+        view.addSubview(cloudedSun)
+        
+        let cloud = UIImageView()
+        cloud.layer.opacity = 0.4
+        cloud.frame = CGRect(x: (view.frame.width-imageSize)/2,
+                             y: view.frame.height-imageSize-padding,
+                             width: imageSize,
+                             height: imageSize)
+        cloud.image = UIImage(named: "cloud-image")
+        view.addSubview(cloud)
+    }
+    
+    func addSelectImageButton(view: UIView) {
+        let selectImageButton = UIButton()
+        let selectImageButtonSize = CGSize(width: 230, height: 60)
+        selectImageButton.frame = CGRect(x: (view.frame.width-selectImageButtonSize.width)/2,
+                                         y: view.frame.height/2 + 115,
+                                         width: selectImageButtonSize.width,
+                                         height: selectImageButtonSize.height)
+        selectImageButton.addTarget(self, action: #selector(selectImageButtonAction), for: .touchUpInside)
+        
+        let shadows = UIView()
+        shadows.isUserInteractionEnabled = false
+        shadows.frame = CGRect(x: 0,
+                               y: 0,
+                               width: selectImageButtonSize.width,
+                               height: selectImageButtonSize.height)
+        shadows.clipsToBounds = false
+        selectImageButton.addSubview(shadows)
+        let shadowPath0 = UIBezierPath(roundedRect: shadows.bounds, cornerRadius: 20)
+        let layer0 = CALayer()
+        layer0.shadowPath = shadowPath0.cgPath
+        layer0.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.2).cgColor
+        layer0.shadowOpacity = 1
+        layer0.shadowRadius = 3
+        layer0.shadowOffset = CGSize(width: 4, height: 4)
+        layer0.bounds = shadows.bounds
+        layer0.position = shadows.center
+        shadows.layer.addSublayer(layer0)
+        let layer1 = CALayer()
+        layer1.bounds = shadows.bounds
+        layer1.position = shadows.center
+        layer1.cornerRadius = 20
+        layer1.borderWidth = 3
+        layer1.borderColor = UIColor(red: 0.355, green: 0.717, blue: 0.979, alpha: 1).cgColor
+        layer1.backgroundColor = UIColor(red: 0.302, green: 0.635, blue: 0.765, alpha: 1).cgColor
+        shadows.layer.addSublayer(layer1)
+        
+        let selectImageButtonText = UILabel()
+        selectImageButtonText.frame = CGRect(x: 0, y: 0, width: 230, height: 60)
+        selectImageButtonText.textColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+        selectImageButtonText.font = UIFont(name: "Roboto-Regular", size: 30)
+        selectImageButtonText.text = "Select image"
+        selectImageButton.addSubview(selectImageButtonText)
+        selectImageButtonText.textAlignment = .center
+        
+        view.addSubview(selectImageButton)
+    }
+    
+    @objc func selectImageButtonAction() {
+        if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum){
+            imagePicker.delegate = self
+            imagePicker.sourceType = .savedPhotosAlbum
+            imagePicker.allowsEditing = false
+            present(imagePicker, animated: true, completion: nil)
         }
     }
     
-    func addPhotoToBackground() {
-        imageView.image = currentImage
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        imagePicker.dismiss(animated: true, completion: nil)
         
-        if let image = AnalyzingPhoto(currentImage).createSkyImage(currentImage) {
-            skyImageView.image = image
+        guard let image = info[.originalImage] as? UIImage else {
+            fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
+        }
+        
+        self.imageView.image = image
+        self.view.bringSubviewToFront(self.imageView)
+        let indicator = Indicator()
+        indicator.showIndicator()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            self.addPhotoAndCalculateCloudPercentage(image: image)
+            indicator.hideIndicator()
+        }
+    }
+    
+    func addPhotoAndCalculateCloudPercentage(image: UIImage) {
+        let photoAnalyzer = PhotoAnalyzer(image)
+        if let image = photoAnalyzer.createSkyImage() {
+            let cloudPercentage = photoAnalyzer.getCloudPercentage(image: image)!
+            if !cloudPercentage.isNaN {
+                self.alert(alertTitle: "", alertMessage: "Cloud Percentage " + String(cloudPercentage) + "%", alertActionTitle: "OK")
+            } else {
+                self.alert(alertTitle: "", alertMessage: "Sky is undetected", alertActionTitle: "OK")
+            }
         } else {
             print("ERROR")
         }
-        
     }
     
     func imageViewCreating() -> UIImageView {
         imageView = .init()
-        imageView.frame.size = CGSize(width: self.view.frame.width/2, height: self.view.frame.height-200)
+        imageView.frame.size = CGSize(width: self.view.frame.width, height: self.view.frame.height-200)
         imageView.contentMode = .scaleAspectFit
+        self.view.bringSubviewToFront(imageView)
         return imageView
-    }
-    
-    func skyImageViewCreating() -> UIImageView {
-        skyImageView = .init()
-        skyImageView.frame.size = CGSize(width: self.view.frame.width/2, height: self.view.frame.height-200)
-        skyImageView.frame.origin.x = self.view.frame.width/2
-        skyImageView.contentMode = .scaleAspectFit
-        
-        skyImageView.isUserInteractionEnabled = true
-        let longPressRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(self.longPressed))
-        longPressRecognizer.minimumPressDuration = 0.5
-        skyImageView.addGestureRecognizer(longPressRecognizer)
-        return skyImageView
-    }
-    
-    @objc func longPressed(recognizer:UIPinchGestureRecognizer) {
-        switch recognizer.state {
-        case .began:
-            UIView.animate(withDuration: 0.1,
-                           animations: {
-                            self.skyImageView.transform = CGAffineTransform.init(scaleX: 0.8, y: 0.8)
-                           },
-                           completion: nil)
-        case .ended:
-            UIView.animate(withDuration: 0.05) {
-                self.skyImageView.transform = CGAffineTransform.identity
-                let imageToDownload = UIImage(data: self.skyImageView.image!.pngData()!)!
-                //                UIImageWriteToSavedPhotosAlbum(imageToDownload, self, nil, nil)
-                //                let imageWithAdjustmentToDownload = imageToDownload.withAdjustment(bySaturationVal: 0, byContrastVal: 1.35)
-                //                UIImageWriteToSavedPhotosAlbum(imageWithAdjustmentToDownload, self, nil, nil)
-                let cloudPercentage = self.getAverageColorOfImage(image: imageToDownload)!
-                self.alert(alertTitle: "Saved", alertMessage: "Image was saved" + "\n" + "Cloud Percentage " + String(cloudPercentage) + "%", alertActionTitle: "OK")
-            }
-        default: break
-        }
-        
     }
     
     // MARK: - Make ALERT
@@ -91,114 +175,6 @@ class ViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
-    func getAverageColorOfImage(image: UIImage) -> Float? /*-> (UInt8, UInt8, UInt8, Float)?*/ {
-        guard let cgImage = image.cgImage else { return nil }
-        let colorSpace = CGColorSpaceCreateDeviceRGB()
-        var bitmapInfo: UInt32 = CGBitmapInfo.byteOrder32Big.rawValue
-        bitmapInfo |= CGImageAlphaInfo.premultipliedLast.rawValue & CGBitmapInfo.alphaInfoMask.rawValue
-        let width = Int(image.size.width)
-        let height = Int(image.size.height)
-        let bytesPerRow = width * 4
-        let imageData = UnsafeMutablePointer<Pixel>.allocate(capacity: width * height)
-        guard let imageContext = CGContext(
-            data: imageData,
-            width: width,
-            height: height,
-            bitsPerComponent: 8,
-            bytesPerRow: bytesPerRow,
-            space: colorSpace,
-            bitmapInfo: bitmapInfo
-        ) else { return nil }
-        imageContext.draw(cgImage, in: CGRect(x: 0, y: 0, width: width, height: height))
-        let pixels = UnsafeMutableBufferPointer<Pixel>(start: imageData, count: width * height)
-        
-        var cloudPercentage: Float = 0
-        print(width,height)
-        
-        var pixelCount = 0
-        var cloudPixelCount = 0
-        
-        for y in 0..<height {
-            for x in 0..<width {
-                let index = y * width + x
-                let pixel = pixels[index]
-                if pixel.alpha != 0 && x%5==y%5 {
-                    if calculateVSC(pixel: pixel) < 0 {
-                        cloudPixelCount += 1
-                    }
-                    pixelCount += 1
-                }
-            }
-        }
-        cloudPercentage = Float(cloudPixelCount) / Float(pixelCount) * 100
-        print(cloudPercentage,"%")
-        
-        return cloudPercentage
-    }
     
-    func calculateVSC(pixel: Pixel) -> Float {
-        var vsc: Float = 0
-        let r = Float(pixel.red)/255
-        let g = Float(pixel.green)/255
-        let b = Float(pixel.blue)/255
-        let v = ([r,g,b].max()! + [r,g,b].min()!)/2
-        let scyl: Float = ([r,g,b].max()! - [r,g,b].min()!) == 0 ? 0 : ([r,g,b].max()!-[r,g,b].min()!)/(1-abs(2*v-1))
-        let scone:Float = 0
-        let br = (b-r)/(b+r)
-        
-        //        vsc = -6.28*r + 0.454*g - 4.11*b - 1.81*scyl - 4.04*scone + 8.88*v + 1.53*br + 0.586
-        vsc = -6.28*r + 0.454*g - 4.11*b - 1.8*scyl + 8.88*v + 1.53*br + 0.586
-        return vsc
-    }
     
-}
-
-public struct Pixel {
-    public var value: UInt32
-    
-    public var red: UInt8 {
-        get {
-            return UInt8(value & 0xFF)
-        } set {
-            value = UInt32(newValue) | (value & 0xFFFFFF00)
-        }
-    }
-    
-    public var green: UInt8 {
-        get {
-            return UInt8((value >> 8) & 0xFF)
-        } set {
-            value = (UInt32(newValue) << 8) | (value & 0xFFFF00FF)
-        }
-    }
-    
-    public var blue: UInt8 {
-        get {
-            return UInt8((value >> 16) & 0xFF)
-        } set {
-            value = (UInt32(newValue) << 16) | (value & 0xFF00FFFF)
-        }
-    }
-    
-    public var alpha: UInt8 {
-        get {
-            return UInt8((value >> 24) & 0xFF)
-        } set {
-            value = (UInt32(newValue) << 24) | (value & 0x00FFFFFF)
-        }
-    }
-}
-
-extension UIImage {
-    func withAdjustment(bySaturationVal: CGFloat, byContrastVal: CGFloat) -> UIImage {
-        guard let cgImage = self.cgImage else { return self }
-        guard let filter = CIFilter(name: "CIColorControls") else { return self }
-        filter.setValue(CIImage(cgImage: cgImage), forKey: kCIInputImageKey)
-        filter.setValue(bySaturationVal, forKey: kCIInputSaturationKey)
-        filter.setValue(byContrastVal, forKey: kCIInputContrastKey)
-        guard let result = filter.value(forKey: kCIOutputImageKey) as? CIImage else { return self }
-        guard let newCgImage = CIContext(options: nil).createCGImage(result, from: result.extent) else { return self }
-        let image = UIImage(cgImage: newCgImage, scale: UIScreen.main.scale, orientation: imageOrientation)
-        return UIImage(data: image.pngData()!)!
-    }
 }
