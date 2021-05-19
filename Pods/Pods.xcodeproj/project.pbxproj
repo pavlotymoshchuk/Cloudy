@@ -1,0 +1,1208 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		D3AE921386E3F53A09FA4AE6610DCA6A /* FritzBase */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = F2180548483178F1424ECF179D374C31 /* Build configuration list for PBXAggregateTarget "FritzBase" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = FritzBase;
+		};
+		EAC56F8FC9E6F7207F01E12B848DCF04 /* FritzVisionSkySegmentationModelAccurate */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = B58BBBC7A04B9D52217CF6B4493DB223 /* Build configuration list for PBXAggregateTarget "FritzVisionSkySegmentationModelAccurate" */;
+			buildPhases = (
+			);
+			dependencies = (
+				EA9272A486EC67C8BB396A9E634CD505 /* PBXTargetDependency */,
+			);
+			name = FritzVisionSkySegmentationModelAccurate;
+		};
+		FD4D230B022BCBFF67A5E99BA7AA380B /* Fritz */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = C4FA394F9748A69C50830F0F8C64BAA3 /* Build configuration list for PBXAggregateTarget "Fritz" */;
+			buildPhases = (
+			);
+			dependencies = (
+				223BDE9CF93153FE55F59C4F254112A3 /* PBXTargetDependency */,
+				394C6437F81ACADDAEBF1CF321313CAE /* PBXTargetDependency */,
+			);
+			name = Fritz;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		057AFB9AD8FA6339D928B7EFC2B70C8A /* Pods-Cloudy-CloudyUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 919625A5D8536496E0C08EF2988CB9FC /* Pods-Cloudy-CloudyUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1978EC83CB4CC484F02D9DBA95BFE9C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		2369C72890A85361DF129B8EBEC29511 /* Pods-Cloudy-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C56648D808F081DDE888894E1D6C737 /* Pods-Cloudy-dummy.m */; };
+		78A9CC18F6FCECB8410C67F849014312 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		9897C4259D9DD3AA42B76579ED224353 /* Pods-CloudyTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA5E393CE58EFD67A473A31E28CED53 /* Pods-CloudyTests-dummy.m */; };
+		9F9E8EACE6ECA683E8E60BD49F4CFA0C /* Pods-Cloudy-CloudyUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FFADB7FC28A4629CBFFA876A202DFF /* Pods-Cloudy-CloudyUITests-dummy.m */; };
+		BD2BA0A487D9FA09FD0692A74796DFED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		C09A5CDC253BEBFB512FDB3D158ACECF /* Pods-CloudyTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 97BA61A0B96494CD18CC93C64F03B8D8 /* Pods-CloudyTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E3F6965204835D7EA4AA007DCC1A5F1B /* Pods-Cloudy-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D8D3C734B682F8287F4D59DD8879A29E /* Pods-Cloudy-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0DF4BB78150249D0C159A20777CDD8A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAC56F8FC9E6F7207F01E12B848DCF04;
+			remoteInfo = FritzVisionSkySegmentationModelAccurate;
+		};
+		1C75CC2E5FBD443EE29691E01BC677A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5592C33064D642DC9264CB402231A7A4;
+			remoteInfo = "Pods-Cloudy";
+		};
+		80EB40E17D33153F08CA6BD80B05D22F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD4D230B022BCBFF67A5E99BA7AA380B;
+			remoteInfo = Fritz;
+		};
+		876F79DC519C81BB067C7BDE933AFCA6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D3AE921386E3F53A09FA4AE6610DCA6A;
+			remoteInfo = FritzBase;
+		};
+		9A92FE32CF2187F3F1CAA087CA951D48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD4D230B022BCBFF67A5E99BA7AA380B;
+			remoteInfo = Fritz;
+		};
+		E01E178FFD9A36ED27BBA2FD805CFEE7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D3AE921386E3F53A09FA4AE6610DCA6A;
+			remoteInfo = FritzBase;
+		};
+		E021F96C8B8E7BDDB3F7D9C435EFFD35 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAC56F8FC9E6F7207F01E12B848DCF04;
+			remoteInfo = FritzVisionSkySegmentationModelAccurate;
+		};
+		EF5BE455FB6E83DF18EE0372D472F496 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D3AE921386E3F53A09FA4AE6610DCA6A;
+			remoteInfo = FritzBase;
+		};
+		F1EA1F73CF2CC03DFDD7ACE8207177AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAC56F8FC9E6F7207F01E12B848DCF04;
+			remoteInfo = FritzVisionSkySegmentationModelAccurate;
+		};
+		FFBAB899F94E7A97DE36D0B5EADBD498 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D3AE921386E3F53A09FA4AE6610DCA6A;
+			remoteInfo = FritzBase;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00563A485E460C15BFD017E82CD073E4 /* Pods-Cloudy-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Cloudy-acknowledgements.markdown"; sourceTree = "<group>"; };
+		03B86BA37E7E932B3493D77071005651 /* Pods-Cloudy-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Cloudy-Info.plist"; sourceTree = "<group>"; };
+		11CC2159963EABCE6EBC95C1BB3D6E38 /* FritzManagedModel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FritzManagedModel.framework; path = Frameworks/FritzManagedModel.framework; sourceTree = "<group>"; };
+		186AE71B29186AB60152E10B93EA55DC /* Pods-Cloudy-CloudyUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Cloudy-CloudyUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		1AB776A92F70E95812CDFCE9FCCD0357 /* CoreMLHelpers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMLHelpers.framework; path = Frameworks/CoreMLHelpers.framework; sourceTree = "<group>"; };
+		1C6CD969CDB001686B9265573DC3505E /* Pods-CloudyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CloudyTests.release.xcconfig"; sourceTree = "<group>"; };
+		1E8955ADE4543362DDAC309486D022E7 /* Pods-Cloudy-CloudyUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Cloudy-CloudyUITests-Info.plist"; sourceTree = "<group>"; };
+		2A568806883B394783D30AE26193AA99 /* Pods-Cloudy-CloudyUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Cloudy-CloudyUITests-frameworks.sh"; sourceTree = "<group>"; };
+		32FFADB7FC28A4629CBFFA876A202DFF /* Pods-Cloudy-CloudyUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Cloudy-CloudyUITests-dummy.m"; sourceTree = "<group>"; };
+		38972D2535E897080DFB1B8CF1702B09 /* Pods-CloudyTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CloudyTests-Info.plist"; sourceTree = "<group>"; };
+		39FD061DB435D1FDAAD5F241C0F308F8 /* Pods-Cloudy-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Cloudy-frameworks.sh"; sourceTree = "<group>"; };
+		3EE3EF08CAC79DBEBFFF5786F217E13E /* Fritz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fritz.framework; path = Frameworks/Fritz.framework; sourceTree = "<group>"; };
+		401BE410B2FD3A5E375FD2C1CCC0F051 /* Fritz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Fritz.release.xcconfig; sourceTree = "<group>"; };
+		5731C13E4D1FEE0FDD51452E35A3D2CA /* Pods-Cloudy-CloudyUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Cloudy-CloudyUITests.modulemap"; sourceTree = "<group>"; };
+		6394AD976D5B31C8725361D2929B6A0F /* Pods-Cloudy.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Cloudy.modulemap"; sourceTree = "<group>"; };
+		721C748F533FD4D64E2FFA59A0A6BCA7 /* Pods-Cloudy-CloudyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Cloudy-CloudyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		790A1578E31C33A704BB2630BE3597D4 /* FritzBase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FritzBase.debug.xcconfig; sourceTree = "<group>"; };
+		8A7B571468EDD448462ADE4A321D4331 /* Pods_CloudyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CloudyTests.framework; path = "Pods-CloudyTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		919625A5D8536496E0C08EF2988CB9FC /* Pods-Cloudy-CloudyUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Cloudy-CloudyUITests-umbrella.h"; sourceTree = "<group>"; };
+		97BA61A0B96494CD18CC93C64F03B8D8 /* Pods-CloudyTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CloudyTests-umbrella.h"; sourceTree = "<group>"; };
+		9C56648D808F081DDE888894E1D6C737 /* Pods-Cloudy-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Cloudy-dummy.m"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A8AD2740E0936C2877A684FD892DA073 /* Pods-CloudyTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CloudyTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		AC8B22FADA2A337831E4AB49F7DAA32E /* FritzVisionSkySegmentationModelAccurate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FritzVisionSkySegmentationModelAccurate.framework; path = Frameworks/FritzVisionSkySegmentationModelAccurate.framework; sourceTree = "<group>"; };
+		ACB1C8F59A775890626A8C9BBAAA6C5A /* Pods-Cloudy-CloudyUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Cloudy-CloudyUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		ADA5E393CE58EFD67A473A31E28CED53 /* Pods-CloudyTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CloudyTests-dummy.m"; sourceTree = "<group>"; };
+		B57F71D73A17E4BAF66E2F6DE76CAEB8 /* FritzVisionSkySegmentationModelAccurate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FritzVisionSkySegmentationModelAccurate.release.xcconfig; sourceTree = "<group>"; };
+		BAD35BC976E66CF67CDE5169DDF670A0 /* Fritz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Fritz.debug.xcconfig; sourceTree = "<group>"; };
+		BC7BB5BD5902B2586046B7FCEE3C9A43 /* Pods-Cloudy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Cloudy.release.xcconfig"; sourceTree = "<group>"; };
+		BE8181391B4F824424A8525EEBF5EAD8 /* FritzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FritzCore.framework; path = Frameworks/FritzCore.framework; sourceTree = "<group>"; };
+		C2C11D5D111AF3192125EC79975239FD /* FritzVision.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FritzVision.framework; path = Frameworks/FritzVision.framework; sourceTree = "<group>"; };
+		C5FD53CAA7ADE194F4523B8FDB0FBD5E /* Pods-Cloudy-CloudyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Cloudy-CloudyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C895BDE8ECAAA3FFCBC0A6E10B34410C /* Pods_Cloudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Cloudy.framework; path = "Pods-Cloudy.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF5EC51CB76A5D3A06AB0B2A8BDFAE4F /* Pods-CloudyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CloudyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D1A4B9CFDC1C7D4D0688FBDFCEC3B1E6 /* Pods_Cloudy_CloudyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Cloudy_CloudyUITests.framework; path = "Pods-Cloudy-CloudyUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8D3C734B682F8287F4D59DD8879A29E /* Pods-Cloudy-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Cloudy-umbrella.h"; sourceTree = "<group>"; };
+		E8DC1243CCF0AE4BFD17F390938F5A07 /* Pods-Cloudy-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Cloudy-acknowledgements.plist"; sourceTree = "<group>"; };
+		EC80A036DA69BFC1233E51CCE6499D38 /* FritzBase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FritzBase.release.xcconfig; sourceTree = "<group>"; };
+		EDE015D34AD2EC33C85BF9FE23181316 /* Pods-CloudyTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CloudyTests.modulemap"; sourceTree = "<group>"; };
+		F424C5A74CDAEFD9A81EFFD33E3E8F6F /* FritzVisionSkySegmentationModelAccurate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FritzVisionSkySegmentationModelAccurate.debug.xcconfig; sourceTree = "<group>"; };
+		F77EC7B05DE345615EEF72DF184784F2 /* Pods-Cloudy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Cloudy.debug.xcconfig"; sourceTree = "<group>"; };
+		F97942384DEFD1A0CA0C45010F37486B /* Pods-CloudyTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CloudyTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		38A89039C03AFCDAD99AD1632026799A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78A9CC18F6FCECB8410C67F849014312 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B731A857E88995AD7792B4E6160288DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD2BA0A487D9FA09FD0692A74796DFED /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0932C568E173B104AB97D36B5132DB9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1978EC83CB4CC484F02D9DBA95BFE9C8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		045CB495B76D806EDB47B79F99D5E014 /* Fritz */ = {
+			isa = PBXGroup;
+			children = (
+				AFBAEBFB7CB821ADBB1E2CD9FF9C6065 /* Support Files */,
+			);
+			name = Fritz;
+			path = Fritz;
+			sourceTree = "<group>";
+		};
+		146F173649B13CBE411E6691697A68D6 /* Pods-Cloudy */ = {
+			isa = PBXGroup;
+			children = (
+				6394AD976D5B31C8725361D2929B6A0F /* Pods-Cloudy.modulemap */,
+				00563A485E460C15BFD017E82CD073E4 /* Pods-Cloudy-acknowledgements.markdown */,
+				E8DC1243CCF0AE4BFD17F390938F5A07 /* Pods-Cloudy-acknowledgements.plist */,
+				9C56648D808F081DDE888894E1D6C737 /* Pods-Cloudy-dummy.m */,
+				39FD061DB435D1FDAAD5F241C0F308F8 /* Pods-Cloudy-frameworks.sh */,
+				03B86BA37E7E932B3493D77071005651 /* Pods-Cloudy-Info.plist */,
+				D8D3C734B682F8287F4D59DD8879A29E /* Pods-Cloudy-umbrella.h */,
+				F77EC7B05DE345615EEF72DF184784F2 /* Pods-Cloudy.debug.xcconfig */,
+				BC7BB5BD5902B2586046B7FCEE3C9A43 /* Pods-Cloudy.release.xcconfig */,
+			);
+			name = "Pods-Cloudy";
+			path = "Target Support Files/Pods-Cloudy";
+			sourceTree = "<group>";
+		};
+		1A61FE8EF2D09374483ACB5398BED495 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C2C11D5D111AF3192125EC79975239FD /* FritzVision.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		271B35AD91598C2D468000F12ECF5FAE /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				75FE47EFF009282B6A0B517F7C96A153 /* Frameworks */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		31A7BE3C7F7064AE7A3FEACDD4CEBAA6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				11CC2159963EABCE6EBC95C1BB3D6E38 /* FritzManagedModel.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		36DC14EE66937ACFE1790FADDAC1BEC6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C895BDE8ECAAA3FFCBC0A6E10B34410C /* Pods_Cloudy.framework */,
+				D1A4B9CFDC1C7D4D0688FBDFCEC3B1E6 /* Pods_Cloudy_CloudyUITests.framework */,
+				8A7B571468EDD448462ADE4A321D4331 /* Pods_CloudyTests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		38D2D75439F985C6E1850DA064E61D1A /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				146F173649B13CBE411E6691697A68D6 /* Pods-Cloudy */,
+				63C8E48B746F7EAC8652F194216562E3 /* Pods-Cloudy-CloudyUITests */,
+				92DA15A539C2CD72AB108FCD659C8112 /* Pods-CloudyTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		4548224543A51B90F4E4F44E0A56E7DF /* ManagedModel */ = {
+			isa = PBXGroup;
+			children = (
+				31A7BE3C7F7064AE7A3FEACDD4CEBAA6 /* Frameworks */,
+			);
+			name = ManagedModel;
+			sourceTree = "<group>";
+		};
+		5065BAC651EB63B90603AF75435AE6D5 /* FritzVisionSkySegmentationModelAccurate */ = {
+			isa = PBXGroup;
+			children = (
+				56119AAABBC4D699230E97E27995110A /* Frameworks */,
+				A67F546DC365BE8CE74F8582EF0833F3 /* Support Files */,
+			);
+			name = FritzVisionSkySegmentationModelAccurate;
+			path = FritzVisionSkySegmentationModelAccurate;
+			sourceTree = "<group>";
+		};
+		56119AAABBC4D699230E97E27995110A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AC8B22FADA2A337831E4AB49F7DAA32E /* FritzVisionSkySegmentationModelAccurate.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		57C1E3A3E0B6D49ECD0D79CA7B06848D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				790A1578E31C33A704BB2630BE3597D4 /* FritzBase.debug.xcconfig */,
+				EC80A036DA69BFC1233E51CCE6499D38 /* FritzBase.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/FritzBase";
+			sourceTree = "<group>";
+		};
+		63C8E48B746F7EAC8652F194216562E3 /* Pods-Cloudy-CloudyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5731C13E4D1FEE0FDD51452E35A3D2CA /* Pods-Cloudy-CloudyUITests.modulemap */,
+				ACB1C8F59A775890626A8C9BBAAA6C5A /* Pods-Cloudy-CloudyUITests-acknowledgements.markdown */,
+				186AE71B29186AB60152E10B93EA55DC /* Pods-Cloudy-CloudyUITests-acknowledgements.plist */,
+				32FFADB7FC28A4629CBFFA876A202DFF /* Pods-Cloudy-CloudyUITests-dummy.m */,
+				2A568806883B394783D30AE26193AA99 /* Pods-Cloudy-CloudyUITests-frameworks.sh */,
+				1E8955ADE4543362DDAC309486D022E7 /* Pods-Cloudy-CloudyUITests-Info.plist */,
+				919625A5D8536496E0C08EF2988CB9FC /* Pods-Cloudy-CloudyUITests-umbrella.h */,
+				721C748F533FD4D64E2FFA59A0A6BCA7 /* Pods-Cloudy-CloudyUITests.debug.xcconfig */,
+				C5FD53CAA7ADE194F4523B8FDB0FBD5E /* Pods-Cloudy-CloudyUITests.release.xcconfig */,
+			);
+			name = "Pods-Cloudy-CloudyUITests";
+			path = "Target Support Files/Pods-Cloudy-CloudyUITests";
+			sourceTree = "<group>";
+		};
+		75FE47EFF009282B6A0B517F7C96A153 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3EE3EF08CAC79DBEBFFF5786F217E13E /* Fritz.framework */,
+				BE8181391B4F824424A8525EEBF5EAD8 /* FritzCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7FAB6AC4306A8B17F2C4EA1383D764BC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				045CB495B76D806EDB47B79F99D5E014 /* Fritz */,
+				A57586702E933279AB62D92529A76FF2 /* FritzBase */,
+				5065BAC651EB63B90603AF75435AE6D5 /* FritzVisionSkySegmentationModelAccurate */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		92DA15A539C2CD72AB108FCD659C8112 /* Pods-CloudyTests */ = {
+			isa = PBXGroup;
+			children = (
+				EDE015D34AD2EC33C85BF9FE23181316 /* Pods-CloudyTests.modulemap */,
+				F97942384DEFD1A0CA0C45010F37486B /* Pods-CloudyTests-acknowledgements.markdown */,
+				A8AD2740E0936C2877A684FD892DA073 /* Pods-CloudyTests-acknowledgements.plist */,
+				ADA5E393CE58EFD67A473A31E28CED53 /* Pods-CloudyTests-dummy.m */,
+				38972D2535E897080DFB1B8CF1702B09 /* Pods-CloudyTests-Info.plist */,
+				97BA61A0B96494CD18CC93C64F03B8D8 /* Pods-CloudyTests-umbrella.h */,
+				CF5EC51CB76A5D3A06AB0B2A8BDFAE4F /* Pods-CloudyTests.debug.xcconfig */,
+				1C6CD969CDB001686B9265573DC3505E /* Pods-CloudyTests.release.xcconfig */,
+			);
+			name = "Pods-CloudyTests";
+			path = "Target Support Files/Pods-CloudyTests";
+			sourceTree = "<group>";
+		};
+		A57586702E933279AB62D92529A76FF2 /* FritzBase */ = {
+			isa = PBXGroup;
+			children = (
+				271B35AD91598C2D468000F12ECF5FAE /* Core */,
+				F90679A11782486C6606F646782D7F5F /* CoreMLHelpers */,
+				4548224543A51B90F4E4F44E0A56E7DF /* ManagedModel */,
+				57C1E3A3E0B6D49ECD0D79CA7B06848D /* Support Files */,
+				AC8DFF90022ADCE4B07FAF47FD7DDEE7 /* Vision */,
+			);
+			name = FritzBase;
+			path = FritzBase;
+			sourceTree = "<group>";
+		};
+		A67F546DC365BE8CE74F8582EF0833F3 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F424C5A74CDAEFD9A81EFFD33E3E8F6F /* FritzVisionSkySegmentationModelAccurate.debug.xcconfig */,
+				B57F71D73A17E4BAF66E2F6DE76CAEB8 /* FritzVisionSkySegmentationModelAccurate.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/FritzVisionSkySegmentationModelAccurate";
+			sourceTree = "<group>";
+		};
+		AC8DFF90022ADCE4B07FAF47FD7DDEE7 /* Vision */ = {
+			isa = PBXGroup;
+			children = (
+				1A61FE8EF2D09374483ACB5398BED495 /* Frameworks */,
+			);
+			name = Vision;
+			sourceTree = "<group>";
+		};
+		AFBAEBFB7CB821ADBB1E2CD9FF9C6065 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BAD35BC976E66CF67CDE5169DDF670A0 /* Fritz.debug.xcconfig */,
+				401BE410B2FD3A5E375FD2C1CCC0F051 /* Fritz.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Fritz";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				7FAB6AC4306A8B17F2C4EA1383D764BC /* Pods */,
+				36DC14EE66937ACFE1790FADDAC1BEC6 /* Products */,
+				38D2D75439F985C6E1850DA064E61D1A /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EADCF7A032607474F8229B757D498F08 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1AB776A92F70E95812CDFCE9FCCD0357 /* CoreMLHelpers.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F90679A11782486C6606F646782D7F5F /* CoreMLHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				EADCF7A032607474F8229B757D498F08 /* Frameworks */,
+			);
+			name = CoreMLHelpers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		6B469153E8994C11A247DF3B9D111B2B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C09A5CDC253BEBFB512FDB3D158ACECF /* Pods-CloudyTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		784E43D9CD7C8AB37BAE9AAD5BE50B92 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3F6965204835D7EA4AA007DCC1A5F1B /* Pods-Cloudy-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9010BFDE13181F1CC26CEC2B78C5045 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				057AFB9AD8FA6339D928B7EFC2B70C8A /* Pods-Cloudy-CloudyUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2DB18034D1A551D48225D38A45A542B7 /* Pods-CloudyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 54533AB5237FC31B956ED10E883EC7C8 /* Build configuration list for PBXNativeTarget "Pods-CloudyTests" */;
+			buildPhases = (
+				6B469153E8994C11A247DF3B9D111B2B /* Headers */,
+				533EE393ACE3FE4126B84904D5FE73B0 /* Sources */,
+				B731A857E88995AD7792B4E6160288DD /* Frameworks */,
+				ECCA7D9FB231CAF61D3E51C8C1192E6D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3F3811AFC50B9A70BDAB71B025125BBD /* PBXTargetDependency */,
+			);
+			name = "Pods-CloudyTests";
+			productName = "Pods-CloudyTests";
+			productReference = 8A7B571468EDD448462ADE4A321D4331 /* Pods_CloudyTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5592C33064D642DC9264CB402231A7A4 /* Pods-Cloudy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45A2B4C4E04375E4BB2E5A0D11FFA961 /* Build configuration list for PBXNativeTarget "Pods-Cloudy" */;
+			buildPhases = (
+				784E43D9CD7C8AB37BAE9AAD5BE50B92 /* Headers */,
+				AEBC2472634B6B6C2C5C1220550B64BA /* Sources */,
+				C0932C568E173B104AB97D36B5132DB9 /* Frameworks */,
+				9D2C4C8B8C7255661E0E8056C0D9E7EB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E58A35AA81C37C4D8828B5D44B135298 /* PBXTargetDependency */,
+				40A3BFEE0C1D0878217B17FAF9601E0B /* PBXTargetDependency */,
+				CFEB631BBAE7891C47A799445CC92FB4 /* PBXTargetDependency */,
+			);
+			name = "Pods-Cloudy";
+			productName = "Pods-Cloudy";
+			productReference = C895BDE8ECAAA3FFCBC0A6E10B34410C /* Pods_Cloudy.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B0432883BF537CECA0D77CEB17258959 /* Pods-Cloudy-CloudyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FFE2D34092991FF2939A9441C2B8C0D /* Build configuration list for PBXNativeTarget "Pods-Cloudy-CloudyUITests" */;
+			buildPhases = (
+				E9010BFDE13181F1CC26CEC2B78C5045 /* Headers */,
+				92B970352BAE07570BDA5C6A26B09D26 /* Sources */,
+				38A89039C03AFCDAD99AD1632026799A /* Frameworks */,
+				4648BA48F6D4A74EBEA1C151987953AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FD160AEE6F31F514C7A8914CFBAB6380 /* PBXTargetDependency */,
+				24E913ACDA91D969A40E1F43ABE2E1CB /* PBXTargetDependency */,
+				046F9A44805528A64ADCF4E35A38C552 /* PBXTargetDependency */,
+			);
+			name = "Pods-Cloudy-CloudyUITests";
+			productName = "Pods-Cloudy-CloudyUITests";
+			productReference = D1A4B9CFDC1C7D4D0688FBDFCEC3B1E6 /* Pods_Cloudy_CloudyUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 36DC14EE66937ACFE1790FADDAC1BEC6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FD4D230B022BCBFF67A5E99BA7AA380B /* Fritz */,
+				D3AE921386E3F53A09FA4AE6610DCA6A /* FritzBase */,
+				EAC56F8FC9E6F7207F01E12B848DCF04 /* FritzVisionSkySegmentationModelAccurate */,
+				5592C33064D642DC9264CB402231A7A4 /* Pods-Cloudy */,
+				B0432883BF537CECA0D77CEB17258959 /* Pods-Cloudy-CloudyUITests */,
+				2DB18034D1A551D48225D38A45A542B7 /* Pods-CloudyTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4648BA48F6D4A74EBEA1C151987953AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D2C4C8B8C7255661E0E8056C0D9E7EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECCA7D9FB231CAF61D3E51C8C1192E6D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		533EE393ACE3FE4126B84904D5FE73B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9897C4259D9DD3AA42B76579ED224353 /* Pods-CloudyTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92B970352BAE07570BDA5C6A26B09D26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F9E8EACE6ECA683E8E60BD49F4CFA0C /* Pods-Cloudy-CloudyUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEBC2472634B6B6C2C5C1220550B64BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2369C72890A85361DF129B8EBEC29511 /* Pods-Cloudy-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		046F9A44805528A64ADCF4E35A38C552 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FritzVisionSkySegmentationModelAccurate;
+			target = EAC56F8FC9E6F7207F01E12B848DCF04 /* FritzVisionSkySegmentationModelAccurate */;
+			targetProxy = 0DF4BB78150249D0C159A20777CDD8A4 /* PBXContainerItemProxy */;
+		};
+		223BDE9CF93153FE55F59C4F254112A3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FritzBase;
+			target = D3AE921386E3F53A09FA4AE6610DCA6A /* FritzBase */;
+			targetProxy = 876F79DC519C81BB067C7BDE933AFCA6 /* PBXContainerItemProxy */;
+		};
+		24E913ACDA91D969A40E1F43ABE2E1CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FritzBase;
+			target = D3AE921386E3F53A09FA4AE6610DCA6A /* FritzBase */;
+			targetProxy = FFBAB899F94E7A97DE36D0B5EADBD498 /* PBXContainerItemProxy */;
+		};
+		394C6437F81ACADDAEBF1CF321313CAE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FritzVisionSkySegmentationModelAccurate;
+			target = EAC56F8FC9E6F7207F01E12B848DCF04 /* FritzVisionSkySegmentationModelAccurate */;
+			targetProxy = F1EA1F73CF2CC03DFDD7ACE8207177AA /* PBXContainerItemProxy */;
+		};
+		3F3811AFC50B9A70BDAB71B025125BBD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Cloudy";
+			target = 5592C33064D642DC9264CB402231A7A4 /* Pods-Cloudy */;
+			targetProxy = 1C75CC2E5FBD443EE29691E01BC677A0 /* PBXContainerItemProxy */;
+		};
+		40A3BFEE0C1D0878217B17FAF9601E0B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FritzBase;
+			target = D3AE921386E3F53A09FA4AE6610DCA6A /* FritzBase */;
+			targetProxy = EF5BE455FB6E83DF18EE0372D472F496 /* PBXContainerItemProxy */;
+		};
+		CFEB631BBAE7891C47A799445CC92FB4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FritzVisionSkySegmentationModelAccurate;
+			target = EAC56F8FC9E6F7207F01E12B848DCF04 /* FritzVisionSkySegmentationModelAccurate */;
+			targetProxy = E021F96C8B8E7BDDB3F7D9C435EFFD35 /* PBXContainerItemProxy */;
+		};
+		E58A35AA81C37C4D8828B5D44B135298 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Fritz;
+			target = FD4D230B022BCBFF67A5E99BA7AA380B /* Fritz */;
+			targetProxy = 80EB40E17D33153F08CA6BD80B05D22F /* PBXContainerItemProxy */;
+		};
+		EA9272A486EC67C8BB396A9E634CD505 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FritzBase;
+			target = D3AE921386E3F53A09FA4AE6610DCA6A /* FritzBase */;
+			targetProxy = E01E178FFD9A36ED27BBA2FD805CFEE7 /* PBXContainerItemProxy */;
+		};
+		FD160AEE6F31F514C7A8914CFBAB6380 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Fritz;
+			target = FD4D230B022BCBFF67A5E99BA7AA380B /* Fritz */;
+			targetProxy = 9A92FE32CF2187F3F1CAA087CA951D48 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2B9E26EAE2CD392AD762421F663075A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		4098CC089C48FF56582F66958CAC877B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F424C5A74CDAEFD9A81EFFD33E3E8F6F /* FritzVisionSkySegmentationModelAccurate.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		40B0A131138F5252417617C2EEFAAFAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B57F71D73A17E4BAF66E2F6DE76CAEB8 /* FritzVisionSkySegmentationModelAccurate.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4BFCEE852CCDC3DFE0AFD03D85904486 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC7BB5BD5902B2586046B7FCEE3C9A43 /* Pods-Cloudy.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Cloudy/Pods-Cloudy-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Cloudy/Pods-Cloudy.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4EECBF3B69E89FE980F4FDD166E8BBB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 401BE410B2FD3A5E375FD2C1CCC0F051 /* Fritz.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5B38D00C9EA0D10D6F1FA60FFD0FCFA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 790A1578E31C33A704BB2630BE3597D4 /* FritzBase.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5BA90C3D392257C62B2568C0A9F73915 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F77EC7B05DE345615EEF72DF184784F2 /* Pods-Cloudy.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Cloudy/Pods-Cloudy-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Cloudy/Pods-Cloudy.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6171316D27409ADE924A2BF8EB4F9092 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BAD35BC976E66CF67CDE5169DDF670A0 /* Fritz.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		62C898ACD22FB9423D6CBC4B8C51E088 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF5EC51CB76A5D3A06AB0B2A8BDFAE4F /* Pods-CloudyTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CloudyTests/Pods-CloudyTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CloudyTests/Pods-CloudyTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		63FAF33E1C55B71A5F5A8B3CC8749F99 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		76D39C7BA85AAFB6F206595698FBEB31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5FD53CAA7ADE194F4523B8FDB0FBD5E /* Pods-Cloudy-CloudyUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Cloudy-CloudyUITests/Pods-Cloudy-CloudyUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Cloudy-CloudyUITests/Pods-Cloudy-CloudyUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9AA0ECEA978E2980F32939EB0CDE098A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C6CD969CDB001686B9265573DC3505E /* Pods-CloudyTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CloudyTests/Pods-CloudyTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CloudyTests/Pods-CloudyTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A54015D232E53964D2CA41F6C819AB1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 721C748F533FD4D64E2FFA59A0A6BCA7 /* Pods-Cloudy-CloudyUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Cloudy-CloudyUITests/Pods-Cloudy-CloudyUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Cloudy-CloudyUITests/Pods-Cloudy-CloudyUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E06A9FAFE2A067CB3D6A26E063B30984 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC80A036DA69BFC1233E51CCE6499D38 /* FritzBase.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3FFE2D34092991FF2939A9441C2B8C0D /* Build configuration list for PBXNativeTarget "Pods-Cloudy-CloudyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A54015D232E53964D2CA41F6C819AB1D /* Debug */,
+				76D39C7BA85AAFB6F206595698FBEB31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		45A2B4C4E04375E4BB2E5A0D11FFA961 /* Build configuration list for PBXNativeTarget "Pods-Cloudy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BA90C3D392257C62B2568C0A9F73915 /* Debug */,
+				4BFCEE852CCDC3DFE0AFD03D85904486 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B9E26EAE2CD392AD762421F663075A1 /* Debug */,
+				63FAF33E1C55B71A5F5A8B3CC8749F99 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		54533AB5237FC31B956ED10E883EC7C8 /* Build configuration list for PBXNativeTarget "Pods-CloudyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62C898ACD22FB9423D6CBC4B8C51E088 /* Debug */,
+				9AA0ECEA978E2980F32939EB0CDE098A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B58BBBC7A04B9D52217CF6B4493DB223 /* Build configuration list for PBXAggregateTarget "FritzVisionSkySegmentationModelAccurate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4098CC089C48FF56582F66958CAC877B /* Debug */,
+				40B0A131138F5252417617C2EEFAAFAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C4FA394F9748A69C50830F0F8C64BAA3 /* Build configuration list for PBXAggregateTarget "Fritz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6171316D27409ADE924A2BF8EB4F9092 /* Debug */,
+				4EECBF3B69E89FE980F4FDD166E8BBB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F2180548483178F1424ECF179D374C31 /* Build configuration list for PBXAggregateTarget "FritzBase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B38D00C9EA0D10D6F1FA60FFD0FCFA1 /* Debug */,
+				E06A9FAFE2A067CB3D6A26E063B30984 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
