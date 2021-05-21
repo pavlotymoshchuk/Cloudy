@@ -155,7 +155,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             skyImage = image
             let cloudPercentage = photoAnalyzer.getCloudPercentage(image: image)!
             if !cloudPercentage.isNaN {
-                self.alert(alertTitle: "", alertMessage: "Cloud Percentage " + String(cloudPercentage) + "%", alertActionTitle: "OK")
+                self.alert(alertTitle: "", alertMessage: "Cloud Percentage " + cloudPercentage.roundedValue(base: 5), alertActionTitle: "OK")
             } else {
                 self.alert(alertTitle: "", alertMessage: "Sky is undetected", alertActionTitle: "OK")
             }
@@ -189,8 +189,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         alert.addAction(action)
         self.present(alert, animated: true, completion: nil)
     }
-    
-    
     
     
 }

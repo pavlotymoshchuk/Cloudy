@@ -37,15 +37,15 @@ class PhotoAnalyzer {
     
     func getCloudPercentage(image: UIImage) -> Float? {
         let averageColor = image.averageColor
-        print("Average image colors: ", averageColor)
+        print("Average image colors: ", averageColor!)
         print("Normal colors:   0.5   0.85    0.8")
-        let rCorrection = Float((averageColor?.rgba.red)!).normalizeValue(by: 0.5)
-        let gCorrection = Float((averageColor?.rgba.green)!).normalizeValue(by: 0.85)
-        let bCorrection = Float((averageColor?.rgba.blue)!).normalizeValue(by: 0.80)
+        let rCorrection = Float((averageColor?.rgba.red)!).correctionValue(by: 0.5)
+        let gCorrection = Float((averageColor?.rgba.green)!).correctionValue(by: 0.85)
+        let bCorrection = Float((averageColor?.rgba.blue)!).correctionValue(by: 0.80)
         print("Color correction: ", rCorrection, gCorrection, bCorrection)
         
         if let imageData = getDataFrom(image: image) {
-            let accuracyValue = 1
+            let accuracyValue = 30
             var pixelCount = 0
             var cloudPixelCount = 0
             let timeStart = Date()
@@ -189,9 +189,14 @@ extension UIColor {
 }
 
 extension Float {
-    func normalizeValue(by: Float) -> Float {
+    func correctionValue(by: Float) -> Float {
         if self > by { return 1+(self-by)/by }
         else if self < by { return 1-(by-self)/by }
         else { return 1 }
+    }
+    
+    func roundedValue(base: Int) -> String {
+        let roundedInt = Int(roundf(self))%base < (base/2)+1 ? Int(roundf(self))/base*base : (Int(roundf(self))/base+1)*base
+        return String(roundedInt)+"%"
     }
 }
