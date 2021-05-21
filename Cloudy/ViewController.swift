@@ -15,12 +15,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     var isCurrentImageSky = Bool()
     var image = UIImage()
     var skyImage = UIImage()
+    var cloudPercentageLabel = UILabel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         addBackground(view: self.view)
         addSelectImageButton(view: self.view)
+        addCloudPercentageLabel(view: self.view)
         
         self.view.insertSubview(imageViewCreating(), at: 0)
         
@@ -119,6 +121,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         view.addSubview(selectImageButton)
     }
     
+    func addCloudPercentageLabel(view: UIView) {
+        cloudPercentageLabel.frame.size = CGSize(width: view.frame.width, height: 50)
+        cloudPercentageLabel.frame.origin = CGPoint(x: 0, y: view.frame.height/2)
+        view.addSubview(cloudPercentageLabel)
+        cloudPercentageLabel.textAlignment = .center
+        cloudPercentageLabel.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 30)
+    }
+    
     @objc func selectImageButtonAction() {
         if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum){
             imagePicker.delegate = self
@@ -143,6 +153,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         indicator.showIndicator()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            self.cloudPercentageLabel.text = ""
             self.addPhotoAndCalculateCloudPercentage(image: image)
             indicator.hideIndicator()
         }
@@ -153,14 +164,18 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         if let image = photoAnalyzer.createSkyImage() {
             isCurrentImageSky = false
             skyImage = image
-            let cloudPercentage = photoAnalyzer.getCloudPercentage(image: image)!
-            if !cloudPercentage.isNaN {
-                self.alert(alertTitle: "", alertMessage: "Cloud Percentage " + cloudPercentage.roundedValue(base: 5), alertActionTitle: "OK")
+            if let cloudPercentage = photoAnalyzer.getCloudPercentage(image: image) {
+                if !cloudPercentage.isNaN {
+                    cloudPercentageLabel.text = "Cloud Percentage " + cloudPercentage.roundedValue(base: 5)
+                } else {
+                    cloudPercentageLabel.text = "Sky is undetected"
+                }
             } else {
-                self.alert(alertTitle: "", alertMessage: "Sky is undetected", alertActionTitle: "OK")
+                cloudPercentageLabel.text = "Sky is undetected"
             }
         } else {
             print("ERROR")
+            cloudPercentageLabel.text = "Sky is undetected"
         }
     }
     
