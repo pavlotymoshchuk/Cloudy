@@ -38,16 +38,17 @@ class PhotoAnalyzer {
     func getCloudPercentage(image: UIImage) -> Float? {
         let averageColor = image.averageColor
         print("Average image colors: ", averageColor)
-        print("Normal colors:   0.6   0.75    0.85")
-        let rCorrection = Float((averageColor?.rgba.red)!).normalizeValue(by: 0.45)
-        let gCorrection = Float((averageColor?.rgba.green)!).normalizeValue(by: 0.80)
-        let bCorrection = Float((averageColor?.rgba.blue)!).normalizeValue(by: 0.85)
+        print("Normal colors:   0.5   0.85    0.8")
+        let rCorrection = Float((averageColor?.rgba.red)!).normalizeValue(by: 0.5)
+        let gCorrection = Float((averageColor?.rgba.green)!).normalizeValue(by: 0.85)
+        let bCorrection = Float((averageColor?.rgba.blue)!).normalizeValue(by: 0.80)
         print("Color correction: ", rCorrection, gCorrection, bCorrection)
         
         if let imageData = getDataFrom(image: image) {
-            let accuracyValue = 5
+            let accuracyValue = 1
             var pixelCount = 0
             var cloudPixelCount = 0
+            let timeStart = Date()
             for y in 0 ..< imageData.height {
                 for x in 0 ..< imageData.width {
                     let index = y * imageData.width + x
@@ -60,6 +61,8 @@ class PhotoAnalyzer {
                     }
                 }
             }
+            let timeSpent = Calendar.current.dateComponents([.second], from: timeStart, to: Date()).second!
+            print("image_dimension:", "w:", imageData.width, " h:", imageData.height ,"accuracy_value: ", accuracyValue, "time_spent: ", timeSpent, "cloud_percentage: ", Float(cloudPixelCount) / Float(pixelCount) * 100)
             return Float(cloudPixelCount) / Float(pixelCount) * 100
         } else {
             return nil
@@ -89,18 +92,6 @@ class PhotoAnalyzer {
     }
     
     func calculateVSC(pixel: Pixel, colorCorrection: (r: Float, g: Float, b: Float)) -> Float {
-        //1        (0.822368 0.842105 0.888158) cloudPecentage: (Zero iteration) 61%  (First iteration) 72%      (Second iteration) 70%          (Third iteration) 73%      (Fourth iteration) 88%      (Fifth iteration) 80%   (80-90%)
-        //2        (0.521472 0.662577 0.846626) cloudPecentage: (Zero iteration) 68%  (First iteration) 11%      (Second iteration) 2%          (Third iteration) 15%      (Fourth iteration) 100%     (Fifth iteration) 90%   (40-50%)
-        //3        (0.247934 0.586777 0.867769) cloudPecentage: (Zero iteration) 12%  (First iteration) 0%       (Second iteration) 0%              (Third iteration) 0%       (Fourth iteration) 0%      (Fifth iteration) 0%    (0-5%)
-        //4        (0.60 0.75 0.85)             cloudPecentage: (Zero iteration) 45%  (First iteration) 45%      (Second iteration) 42%          (Third iteration) 46%      (Fourth iteration) 63%      (Fifth iteration) 51%    (40-50%)
-        //5        (0.623762 0.69802 0.80198)   cloudPecentage: (Zero iteration) 55%  (First iteration) 54%      (Second iteration) 48%          (Third iteration) 55%      (Fourth iteration) 85%      (Fifth iteration) 71%    (70-80%)
-        // First iteration base (0.6 0.75 0.85)
-        // Second iteration base (0.6 0.5 0.85)
-        // Third iteration base (0.6 0.85 0.85)
-        // Fourth iteration base (0.4 0.85 0.85)
-        // Fifth iteration base (0.5 0.85 0.85)
-        
-        var vsc: Float = 0
         let r = Float(pixel.red)/255
         let g = Float(pixel.green)/255
         let b = Float(pixel.blue)/255
@@ -109,9 +100,7 @@ class PhotoAnalyzer {
         //        let scone: Float = 0
         let br = (b-r)/(b+r)
         
-        //        vsc = -6.28*r + 0.454*g - 4.11*b - 1.81*scyl - 4.04*scone + 8.88*v + 1.53*br + 0.586
-        vsc = -6.28*r*colorCorrection.r + 0.454*g*colorCorrection.g - 4.11*b*colorCorrection.b - 1.8*scyl + 8.88*v + 1.53*br + 0.586//*(colorCorrection.r*colorCorrection.g*colorCorrection.b)
-        return vsc
+        return -6.28*r*colorCorrection.r + 0.454*g*colorCorrection.g - 4.11*b*colorCorrection.b - 1.8*scyl + 8.88*v + 1.53*br + 0.586//*(colorCorrection.r*colorCorrection.g*colorCorrection.b)
     }
     
     func createMask(of image: UIImage, fromMask mask: UIImage, withBackground background: UIImage? = nil) -> UIImage? {
@@ -164,7 +153,6 @@ class PhotoAnalyzer {
 }
 
 extension UIImage {
-    
     var averageColor: UIColor? {
         var bitmap = [UInt8](repeating: 0, count: 4)
         if #available(iOS 9.0, *) {
@@ -176,7 +164,6 @@ extension UIImage {
             let outputImage = filter.outputImage!
             let outputExtent = outputImage.extent
             assert(outputExtent.size.width == 1 && outputExtent.size.height == 1)
-            
             context.render(outputImage, toBitmap: &bitmap, rowBytes: 4, bounds: CGRect(x: 0, y: 0, width: 1, height: 1), format: .RGBA8, colorSpace: CGColorSpaceCreateDeviceRGB())
         } else {
             let context = CGContext(data: &bitmap, width: 1, height: 1, bitsPerComponent: 8, bytesPerRow: 4, space: CGColorSpaceCreateDeviceRGB(), bitmapInfo: CGImageAlphaInfo.noneSkipFirst.rawValue)!
@@ -184,12 +171,9 @@ extension UIImage {
             
             context.draw(inputImage!, in: CGRect(x: 0, y: 0, width: 1, height: 1))
         }
-        
         let alpha: CGFloat = CGFloat(bitmap[3]) / 255.0
         let multiplier: CGFloat = alpha*255.0
-        
         return UIColor(red: CGFloat(bitmap[0])/multiplier, green: CGFloat(bitmap[1])/multiplier, blue: CGFloat(bitmap[2])/multiplier, alpha: alpha)
-        
     }
 }
 
@@ -200,13 +184,11 @@ extension UIColor {
         var blue: CGFloat = 0
         var alpha: CGFloat = 0
         getRed(&red, green: &green, blue: &blue, alpha: &alpha)
-        
         return (red, green, blue, alpha)
     }
 }
 
 extension Float {
-    
     func normalizeValue(by: Float) -> Float {
         if self > by { return 1+(self-by)/by }
         else if self < by { return 1-(by-self)/by }
