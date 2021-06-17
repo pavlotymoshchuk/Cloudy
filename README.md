@@ -41,16 +41,3 @@ Tasks:
 	✓	https://docs.fritz.ai/develop/vision/image-segmentation/#ios       Get the sky
 
 	✓	https://www.hackingwithswift.com/example-code/media/how-to-read-the-average-color-of-a-uiimage-using-ciareaaverage      Average color
-
-
-	//1        (0.822368 0.842105 0.888158) 	cloudPecentage: (Zero iteration) 61%  (First iteration) 72%      (Second iteration) 70%          (Third iteration) 73%      (Fourth iteration) 88%      (Fifth iteration) 80%   (80-90%)
-        //2        (0.521472 0.662577 0.846626) 	cloudPecentage: (Zero iteration) 68%  (First iteration) 11%      (Second iteration) 2%          (Third iteration) 15%      (Fourth iteration) 100%     (Fifth iteration) 90%   (40-50%)
-        //3        (0.247934 0.586777 0.867769) 	cloudPecentage: (Zero iteration) 12%  (First iteration) 0%         (Second iteration) 0%              (Third iteration) 0%       (Fourth iteration) 0%      (Fifth iteration) 0%    (0-5%)
-        //4        (0.598639 0.755102 0.85034)             			cloudPecentage: (Zero iteration) 45%  (First iteration) 45%      (Second iteration) 42%          (Third iteration) 46%      (Fourth iteration) 63%      (Fifth iteration) 51%    (40-50%)
-        //5        (0.623762 0.69802 0.80198)   	cloudPecentage: (Zero iteration) 55%  (First iteration) 54%      (Second iteration) 48%          (Third iteration) 55%      (Fourth iteration) 85%      (Fifth iteration) 71%    (70-80%)
-        // First iteration base (0.6 0.75 0.85)
-        // Second iteration base (0.6 0.5 0.85)
-        // Third iteration base (0.6 0.85 0.85)
-        // Fourth iteration base (0.4 0.85 0.85)
-        // Fifth iteration base (0.5 0.85 0.85)
-
